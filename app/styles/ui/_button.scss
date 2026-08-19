@@ -17,6 +17,8 @@
   background-color: var(--secondary-button-background);
 
   border-radius: var(--button-border-radius);
+  font-weight: 500;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
 
   &:not([aria-disabled='true']):hover {
     border-color: var(--secondary-button-hover-border-color);

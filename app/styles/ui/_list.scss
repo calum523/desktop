@@ -78,9 +78,13 @@
   // The selected items must act as the focused element when inside
   &.focus-within .list-item.selected:not(.in-keyboard-insertion-mode) {
     --text-color: var(--box-selected-active-text-color);
-    --text-secondary-color: var(--box-selected-active-text-color);
 
     color: var(--text-color);
+    background-color: var(--box-selected-active-background-color);
+    box-shadow: inset 2px 0 0 var(--box-border-accent-color);
+  }
+
+  &.focus-within .list-item.selected:not(.in-keyboard-insertion-mode):hover {
     background-color: var(--box-selected-active-background-color);
   }
 }
@@ -95,10 +99,10 @@
 
   &.selected {
     --text-color: var(--box-selected-text-color);
-    --text-secondary-color: var(--box-selected-text-color);
 
     color: var(--text-color);
     background-color: var(--box-selected-background-color);
+    box-shadow: inset 2px 0 0 var(--box-border-accent-color);
   }
 
   &:focus {
@@ -107,6 +111,10 @@
 
   &:not(.not-selectable):hover {
     background: var(--list-item-hover-background-color);
+  }
+
+  &.selected:not(.not-selectable):hover {
+    background-color: var(--box-selected-background-color);
   }
 
   .list-item-content-wrapper {
